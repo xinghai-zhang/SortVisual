@@ -65,8 +65,9 @@
     <div class="jumbotron">
       <div class="container">
         <h2></h2>
-        <p>This is a visulization for different sorting algorithm</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <h3>This is a visualization for insertion sort</h3>
+        <p>Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list. Each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain.</p>
+        <p><a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Insertion_sort" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 
@@ -74,22 +75,60 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-8">
-         
+          <h2>Visualization</h2>
           <div id="graph"></div>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <button id="play">Play</button>
+          Speed: <input type="text" value="50" id="speed"></input>ms 
+          <button id="reset">Reset</button>
+
         </div>
 
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Pesudo Code</h2>
+          <pre>for i = 1 to length(A) - 1
+  j = i
+  while j > 0 and A[j-1] > A[j]
+    swap A[j] and A[j-1]
+    j =j - 1
+  end while
+end for
+</pre>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Questions</h2>
+          <p>Play the animation multiple times and take notice of the number of comparison. Which one of the following best decribes the relation between the number of bars N, and the number of comparison?</p>
+          <ul class="list-group">
+            <li class="list-group-item">N</li>
+            <li class="list-group-item">N&#x33d2;(N)</li>
+            <li class="list-group-item">N<sup>2</sup>/2</li>
+            <li class="list-group-item">N!</li>
+            <li class="list-group-item">&#x33d2;(N)</li>
+          </ul>
+          <script>
+          $(document).ready(function(){$("p1").hide();});
+          $(document).ready(function(){
+              $("#hide").click(function(){
+                  $("p1").hide();
+              });
+              $("#show").click(function(){
+                  $("p1").show();
+              });
+          });
+          </script>
+          <p1>N<sup>2</sup>/2</p1>
 
+          <button id="hide">Hide</button>
+          <button id="show">Show</button>
+
+        </div>
+        <div class="col-md-4">
+          
+        </div>
       <hr>
 
       <footer>
-        <p>&copy; Company 2014</p>
       </footer>
     </div> <!-- /container -->
 
